@@ -1,10 +1,11 @@
 import React from 'react';
+import RecipeList from "./components/RecipeComponents/RecipeList"
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <p>Hello</p>
+      <RecipeList />
     </div>
   );
 }
