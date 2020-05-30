@@ -3,8 +3,7 @@ import { BASE_URL } from "../constants/BaseUrl";
 import Search from "./SearchRecipe";
 import Spinner from "react-bootstrap/Spinner";
 import PropTypes from "prop-types";
-
-
+import IngredientList from "./IngredientList";
 
 function RecipeList({ title, thumbnail, ingredients }) {
 		const [ recipeItems, setRecipeItems ] = useState([]);
@@ -30,7 +29,6 @@ function RecipeList({ title, thumbnail, ingredients }) {
     return <Spinner animation="border" className="spinner" />;
 }
 
-
 	const filterItems = function(e) {
 		const searchValue = e.target.value.toLowerCase();
 		const filteredArray = recipeItems.filter(function(item) {
@@ -54,14 +52,12 @@ function RecipeList({ title, thumbnail, ingredients }) {
 					<div className="wrap">
 						<h1>{title}</h1>
 						<img src={thumbnail} alt={title}/>
-						<p>Ingredients: {ingredients}</p>
+						<IngredientList ingredients={ingredients}/>
 					</div>
 					</>
 				)
 
-			})}
-			
-			
+			})}			
 		</>
 	)
 	RecipeList.propTypes = {

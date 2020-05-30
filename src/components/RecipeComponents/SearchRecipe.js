@@ -5,7 +5,6 @@ export default function Search({ handleSearch }) {
 	return (
 		<>
 			<input type="text" placeholder="search by title" onChange={event => handleSearch(event)} />
-			
 		</>
 	)
 }
