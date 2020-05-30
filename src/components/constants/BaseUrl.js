@@ -1,2 +1,2 @@
-export const BASE_URL = "https://cors-anywhere.herokuapp.com/http://www.recipepuppy.com/api/"
+export const BASE_URL = "https://noroffcors.herokuapp.com/http://www.recipepuppy.com/api/"
 
